@@ -8,6 +8,7 @@
 #include "elf64_sheader.h"
 #include "errors.h"
 #include "util.h"
+#include "verification_set.h"
 #include <ctype.h>
 #include <fcntl.h>
 #include <p101_c/p101_stdlib.h>
@@ -33,13 +34,6 @@ enum states
     PARSE_PROGRAM_HEADERS,
     PARSE_SECTION_HEADERS,
     CLEANUP,
-};
-
-struct verification_set
-{
-    int (*verifier)(uint64_t, char *);
-    const uint64_t input;
-    const char    *field_name;
 };
 
 static p101_fsm_state_t parse_arguments(const struct p101_env *env, struct p101_error *err, void *context);

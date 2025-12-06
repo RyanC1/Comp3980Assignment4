@@ -38,6 +38,7 @@ set(elfinspect_HEADERS
         include/elf64_sheader.h
         include/elf_ident.h
         include/errors.h
+        include/verification_set.h
 )
 
 set(elfinspect_LINK_LIBRARIES
