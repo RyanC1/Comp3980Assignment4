@@ -28,18 +28,6 @@ ssize_t safe_read(int fd, void *buf, size_t count, bool exact);
  */
 ssize_t safe_write(int fd, const void *buf, size_t n);
 
-/**
- * Creates a newly allocated string using by concatenating the
- * two given strings, or returns NULL if allocation fails.
- *
- * Assumes both given arguments are valid c strings (null terminated)
- *
- * @param str1 the first string
- * @param str2 the second string
- * @return a pointer to the new string or nullptr if allocation fails
- */
-char * concat_string(const char * str1, const char * str2);
-
 
 /**
  * Determines host endianess

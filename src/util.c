@@ -67,22 +67,6 @@ ssize_t safe_write(int fd, const void *buf, size_t n)
     return (ssize_t)n;
 }
 
-char *concat_string(const char *str1, const char *str2)
-{
-    size_t len = strlen(str1) + strlen(str2);
-
-    char *result = (char *)malloc(len + 1);
-    if(result == NULL)
-    {
-        return NULL;
-    }
-    memset(result, 0, len);
-
-    sprintf(result, "%s%s", str1, str2);
-
-    return result;
-}
-
 int determine_endianness(void)
 {
     const uint16_t v = 0x0102;
