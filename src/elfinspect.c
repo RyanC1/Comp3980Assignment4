@@ -42,9 +42,9 @@ static p101_fsm_state_t read_elf_header(const struct p101_env *env, struct p101_
 static p101_fsm_state_t verify_elf_header(const struct p101_env *env, struct p101_error *err, void *context);
 static int              run_header_verifiers(const struct p101_env *env, struct p101_error *err, const elf_header *header, char **err_msg);
 static p101_fsm_state_t parse_program_headers(const struct p101_env *env, struct p101_error *err, void *context);
-static p101_fsm_state_t parse_section_headers(const struct p101_env *env, struct p101_error *err, void *context);
 void                    print_elf32_pheaders(elf32_pheader *program_headers, uint64_t count);
 void                    print_elf64_pheaders(elf64_pheader *program_headers, uint64_t count);
+static p101_fsm_state_t parse_section_headers(const struct p101_env *env, struct p101_error *err, void *context);
 void                    print_elf32_sheaders(elf32_sheader *section_headers, uint64_t count);
 void                    print_elf64_sheaders(elf64_sheader *section_headers, uint64_t count);
 static p101_fsm_state_t usage(const struct p101_env *env, struct p101_error *err, void *context);
